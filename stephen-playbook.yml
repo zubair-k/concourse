@@ -1,0 +1,10 @@
+- name: Create a file on windows servers
+  hosts: winservers
+
+  tasks:
+    - name: Touch a file (creates if not present, updates modification time if present)
+      ansible.windows.win_file:
+        path: C:\test.txt
+        state: touch
+
+
